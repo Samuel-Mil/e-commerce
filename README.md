@@ -98,12 +98,14 @@ Estratégia:
 ## Como Rodar o Projeto?
 
 ```sh
-docker-compose up -d
+docker compose up -d --build
 ```
 
 Aplicação disponível em:
 
 - Backend: http://localhost:3000
+
+- Frontend: http://localhost:5173
 
 - PostgreSQL: localhost:5432
 
