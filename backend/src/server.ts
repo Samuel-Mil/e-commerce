@@ -9,6 +9,10 @@ const port = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 app.use(cors());
+(BigInt.prototype as any).toJSON = function () {
+  return this.toString();
+};
+
 app.use(routes);
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof Error) {
